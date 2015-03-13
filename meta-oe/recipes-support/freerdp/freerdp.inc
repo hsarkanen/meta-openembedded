@@ -17,16 +17,12 @@ do_compile() {
 	oe_runmake
 }
 
-EXTRA_OECMAKE += "-DWITH_PULSEAUDIO=OFF \
-                  -DWITH_PCSC=OFF \
-                  -DWITH_CUPS=OFF \
-                  -DWITH_FFMPEG=OFF \
-                  -DWITH_CUNIT=OFF \
+EXTRA_OECMAKE += "\
                   -DWITH_X11=OFF \
-                  -DWITH_XKBFILE=OFF \
                   -DWITH_WAYLAND=ON \
-                  -DWITH_XINERAMA=OFF \
-                  -DWITH_GSTREAMER=OFF \
+                  -DWITH_SERVER=ON \
+                  -DWITH_ALSA=ON \
+                  -DWITH_SSE2=OFF \
                   -DCMAKE_MODULE_PATH=${workdir} \
                   -DARM_FP_ABI=hard \                  
 "
