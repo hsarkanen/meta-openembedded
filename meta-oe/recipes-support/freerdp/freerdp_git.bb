@@ -5,12 +5,14 @@ include freerdp.inc
 
 inherit gitpkgv
 
-PV = "1.0.2+gitr${SRCPV}"
+PV = "1.2.0+gitr${SRCPV}"
 PKGV = "${GITPKGVTAG}"
 
 EXTRA_OECMAKE += "-DWITH_MANPAGES=OFF"
 
-SRCREV = "f311acaffb9190567e2b478a98d7cbfaf2709f6b"
-SRC_URI = "git://github.com/FreeRDP/FreeRDP.git;branch=stable-1.0"
+SRCREV = "3f371b22ad67033c366e41f459747796a95633b8"
+SRC_URI += "\
+	git://github.com/FreeRDP/FreeRDP.git;branch=master \
+"
 
 S = "${WORKDIR}/git"
